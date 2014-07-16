@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication14
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string a = "0123456789abcdefghijklmnopqrstuvwxyz";
+            Console.Write("vvedite osnovanie sistemy schisleniya: ");
+            var osnovanie = int.Parse(Console.ReadLine());
+            Console.Write("vvedite chislo: ");
+            string chislo = Console.ReadLine();
+            string naturalnoe = a.Substring(0, osnovanie);
+            if (chislo.All(naturalnoe.Contains) == true)
+                Console.WriteLine("OK!");
+            else
+                Console.WriteLine("Error!");
+            Console.ReadKey();
+        }
+    }
+}
